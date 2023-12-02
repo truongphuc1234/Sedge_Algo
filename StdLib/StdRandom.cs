@@ -15,4 +15,19 @@ public class StdRandom
     {
         return new Random(stdRandom.seed).Next();
     }
+
+    public static int Uniform(int n)
+    {
+        return new Random(stdRandom.seed)   .Next(n);
+    }
+
+    public static double Uniform(double min, double max)
+    {
+        return min + new Random(stdRandom.seed).NextDouble() * (max - min);
+    }
+
+    public static int Uniform(int min, int max)
+    {
+        return min + new Random(stdRandom.seed).Next(max - min);
+    }
 }
